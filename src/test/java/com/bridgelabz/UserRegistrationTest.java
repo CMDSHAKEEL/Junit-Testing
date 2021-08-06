@@ -31,12 +31,14 @@ public class UserRegistrationTest {
 
     }
 
+    // creating method for SecondName
+
     @Test
     public void givenValidSecondName_ShouldReturnTrue_Test() {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("SHAKEEL");
+        boolean result = userRegistration.validateSecondName("shakeeel");
 
         Assert.assertTrue(result);
     }
@@ -46,9 +48,30 @@ public class UserRegistrationTest {
 
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validateFirstName("SHAKEEL");
+        boolean result = userRegistration.validateSecondName("Shakeel");
 
         Assert.assertFalse(result);
 
+    }
+      /*
+     creating method for Email validation
+     for True test
+     */
+    @Test
+    public void givenInValidEmail_ShouldReturnTrue_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validateEmail("cmdshakeel21@gmail.com");
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenInValidEmail_ShouldReturnFalse_Test() {
+        UserRegistration userRegistration = new UserRegistration();
+
+        boolean result = userRegistration.validateEmail("cmdshakeel21gmail.com");
+
+        Assert.assertFalse(result);
     }
 }
