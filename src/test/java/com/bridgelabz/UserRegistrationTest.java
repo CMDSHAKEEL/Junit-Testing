@@ -102,7 +102,7 @@ public class UserRegistrationTest {
     public void givenValidPassWordvalid_ShouldReturnTrue_Test() {
         UserRegistration userRegistration = new UserRegistration();
 
-        boolean result = userRegistration.validatePassword("DB210519988");
+        boolean result = userRegistration.validatePassword("DBa210519988");
 
         Assert.assertTrue(result);
     }
